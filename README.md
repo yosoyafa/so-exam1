@@ -10,7 +10,7 @@
 **Estudiante:** Carlos Andrés Afanador Cabal  
 **Código:** A00054652  
 **URL:** https://github.com/yosoyafa/so-exam1  
--  
+
 ### SOLUCIÓN
 
 **3.** 
