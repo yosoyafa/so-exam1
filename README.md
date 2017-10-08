@@ -61,6 +61,6 @@
 [6]: images/table.png
 [7]: images/script.png
 [8]: images/pathbooks.png
-[9]: images/crontab.png
+[9]: images/crontab1.png
 [10]: images/descargalibros.png
 [11]: images/libro.png
