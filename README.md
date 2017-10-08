@@ -42,7 +42,7 @@
  ![](script.png)  
  ![](pathbooks.png)  
    
- Para que el script sea ejecutado cada 5 minutos, se debe hacer uso del crontab (crontab -e, para editarlo), archivo en el cual podemos especificar que un script sea ejecutado cada tanto que sea necesario. Ahí solicitamos que el script bajarlibros.sh sea ejecutado cada dia de la semana (*), cada mes del año (* * *), cada dia del mes (*), cada hora del dia (*), y cada 5 minutos de la hora (5).
+ Para que el script sea ejecutado cada 5 minutos, se debe hacer uso del crontab (crontab -e, para editarlo), archivo en el cual podemos especificar que un script sea ejecutado cada tanto que sea necesario. Ahí solicitamos que el script bajarlibros.sh sea ejecutado cada dia de la semana (* * *), cada mes del año (* * *), cada dia del mes (* * *), cada hora del dia (* * *), y cada 5 minutos de la hora (5).
   ![](crontab.png)  
     
   La ejecución directa del script:  
