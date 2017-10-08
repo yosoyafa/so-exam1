@@ -53,6 +53,18 @@
  ![][11]   
   
   
+### Referencias
+* https://cmdchallenge.com  
+* https://www.gutenberg.org  
+* https://github.com/jvns/kernel-module-fun/blob/master/rickroll.c
+* https://www.youtube.com/watch?v=efEZZZf_nTc
+* https://stackoverflow.com/questions/44044449/facing-issue-while-installing-jq-in-centos
+* http://richardking.github.io/devops/unix/2014/10/20/ops-tools-awk-sed-grep/
+* https://www.lifewire.com/file-contents-in-column-format-linux-4018107
+* https://www.gnu.org/software/wget/manual/wget.html#Option-Syntax
+* https://stackoverflow.com/questions/4181703/how-to-concatenate-string-variables-in-bash
+* https://askubuntu.com/questions/609850/what-is-the-correct-way-to-edit-a-crontab-file
+  
 [1]: images/sum-me.png
 [2]: images/replace.png
 [3]: images/reverse.png
