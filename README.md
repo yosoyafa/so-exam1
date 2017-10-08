@@ -38,14 +38,14 @@
   
   
 **4.**  El script para descargar los libros del proyecto Gutenberg consiste basicamente en hacer un 'wget' de la pagina que contiene el libro. La url de cada libro se compone de dos partes, una constante y una variable; la constante es: 'http://www.gutenberg.org/cache/epub/', seguido del número identificador del libro, la cadena '/pg', nuevamente el número identificador del libro, y la cadena '.txt' para finalizar; ejemplo: http://www.gutenberg.org/cache/epub/345/pg345.txt, aquí el identificador es 345. Ahora bien, al comando wget se le debe especificar la url, y la ruta donde se guardará el contenido descargado, en este caso: el libro. Para obtener libros diferentes en cada descarga, se usa un númeor aleatorio entre 300 y 744.  
-
+  
  ![][7]   
  ![][8]   
    
  Para que el script sea ejecutado cada 5 minutos, se debe hacer uso del crontab (crontab -e, para editarlo), archivo en el cual podemos especificar que un script sea ejecutado cada tanto que sea necesario. Ahí solicitamos que el script bajarlibros.sh sea ejecutado cada dia de la semana (* * *), cada mes del año (* * *), cada dia del mes (* * *), cada hora del dia (* * *), y cada 5 minutos de la hora (5).  
    
  ![][9]   
-    
+      
   La ejecución directa del script:  
  ![][10]   
     
