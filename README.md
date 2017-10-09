@@ -51,8 +51,30 @@
     
   Despliegue del libro descargado, y posterirormete un nuevo libro:  
  ![][11]   
+ 
+   
+     
+**5.** En general, lo que hace este código es engañar al usuario del sistema haciendo que cuando quiera reproducir cualquier archivo con extension .mp3, se haga un Rickroll (reproducir Never Gonna Give You Up- Rick Astley). Teniendo en cuenta que el código realizará una intervención directa en los llamados al sistema, se necesita incluir ciertas librerías de linux: init.h, module.h, string.h, syscalls.h, kernel.h.  
+  
+Primeramente, se define la ruta en la que está almacenada la canción sorpresa y se definen también los parámetros del módulo y los punteros que determinan los permisos de edición para la parte de la memoria que vamos a modificar.  
+  
+ ![][12] 
+ ![][13]
   
   
+Luego se ejecuta el rickroll_init: primero se verifica que la ruta de la canción sea valida y así no generar errores peligrosos que pueden ocasionar daños al sistema; luego se pide al sistema la tabla de llamadas al sistema y también se verifica que esta se haya obtenido de buena manera. Ahora se modifica el registro cr0 para poder modificar los llamados al sistema, que es lo que se quiere hacer, con la protección desahabilitada, se guarda la llamada al sistema original -‘__NR_open’ (para que exista la posibilidad de volver el sistema a la normalidad), se cambia el valor que tiene la tabla en __NR_open, por el rickroll_open, y por último se vuelven habilitar la protección de los llamados. Si todo va bien, retorna ‘0’, sino retornará el error que se generó.  
+  
+  ![][14]   
+
+El nuevo llamado al sistema, rickroll_open, debe verificar si el archivo que se quiere abrir es una canción (.mp3) y si es pertinente desviar la apertura; si el archivo no tiene extension mp3, se ejecuta la apertura normal, sino, se procede a la alteración, la cual cambia la ruta original a abrir, por la del rickrolling.  
+  
+ ![][15]   
+  
+Ahora bien, para volver el sistema a la normalidad, se tiene el método rickroll_cleanup, el cual se resigna la llamada al sistema original (guardada previamente en el rickroll_init) a su posición el la tabla de llamadas al sistema, no sin antes haber desactivado la protección, y sin olvidar activarla posteriormente.  
+  
+ ![][16]   
+  
+    
 ### Referencias
 * https://cmdchallenge.com  
 * https://www.gutenberg.org  
@@ -76,3 +98,8 @@
 [9]: images/crontab1.png
 [10]: images/descargalibros.png
 [11]: images/libro1.png
+[12]: images/inc.png
+[13]: images/prot.png
+[14]: images/init.png
+[15]: images/open.png
+[16]: images/cleanup.png
