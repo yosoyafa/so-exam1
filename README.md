@@ -86,6 +86,9 @@ Ahora bien, para volver el sistema a la normalidad, se tiene el método rickroll
 * https://www.gnu.org/software/wget/manual/wget.html#Option-Syntax
 * https://stackoverflow.com/questions/4181703/how-to-concatenate-string-variables-in-bash
 * https://askubuntu.com/questions/609850/what-is-the-correct-way-to-edit-a-crontab-file
+* http://www.tldp.org/LDP/lkmpg/2.6/html/x323.html
+* http://www.makelinux.net/ldd3/chp-2-sect-8
+* http://elixir.free-electrons.com/linux/v3.6/ident/KERNEL_DS
   
 [1]: images/sum-me.png
 [2]: images/replace.png
